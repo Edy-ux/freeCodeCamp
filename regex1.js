@@ -1,7 +1,7 @@
 //TODO
-const str = "Para maiores informações, veja o Capítulo 3.4.5.1";
-const re = /(capítulo \d+(\.\d)*)/i;
-const found = str.match(re);
+const str = "Para maiores informações, veja o Capítulo 3.4.5.1"
+const re = /(capítulo \d+(\.\d)*)/i
+const found = str.match(re)
 
 console.log(found)
 
@@ -24,9 +24,9 @@ console.log(NameRegex.test(str)) // true
 console.log(str.match(NameRegex)) //["dni" , index: 1, input: "Ednei, ...."]
 
 /* Use uma classe de caracteres com vogais (a, e, i, o, u) em seu regex vowelRegex para encontrar todas as vogais na string quoteSample. */
-const quoteSample = "Beware of bugs in the above code; I have only proved it correct, not tried it.";
-const vowelRegex = /[aeiou]/gi; // Change this line
-const result = quoteSample.match(vowelRegex) // Change this line
+const quoteSample = "Beware of bugs in the above code I have only proved it correct, not tried it.";
+const vowelRegex = /[aeiou]/gi
+const result = quoteSample.match(vowelRegex)
 console.log(result) //result 
     /* ['e', 'a', 'e', 'o', 'u', 'i',
     'e', 'a', 'o', 'e', 'o', 'e',
@@ -34,7 +34,7 @@ console.log(result) //result
     'i', 'o', 'e', 'o', 'i', 'e','i' ] */
 
 //retornando todas os caracteres do alfabeto
-const quoteSample = "The quick brown fox jumps over the lazy dog.";
+const quoteSample = "The quick brown fox jumps over the lazy dog."
 const alphabetRegex = /[a-z]/ig
 const result = quoteSample.match(alphabetRegex)
 console.log(result.sort())
@@ -47,8 +47,8 @@ const [, ...result3] = result2
 console.log(result3)
 
 // é possível combinar uma série de letras e números em um único conjunto de caracteres
-let quoteSample = "Blueberry 3.141592653s are delicious.";
-let myRegex = /[h-s0-5]/gi
+let quoteSample = "Blueberry 3.141592653s are delicious."
+let myRegex = /[h-s0-5]/gi // de h á s, de 0 a 5
 let result = quoteSample.match(myRegex)
 
 console.log(result)
@@ -57,12 +57,18 @@ console.log(result)
 /* Para criar um conjunto de caracteres negado, coloque um caractere circunflexo (^) após o colchete de abertura e antes dos caracteres que não deseja corresponder. */
 
 /* . Note que caracteres como  [., !, [, @, ]  e espaço em branco são combinados - o conjunto de carateres de negação apenas exclui vogais não combinadas */
-let quoteSample = "3 blind mice.";
-let myRegex = /[^aeiouu0-9]/ig; // caracter de negação
-let result = quoteSample.match(myRegex); // Change this line
+let quoteSample = "3 blind mice."
+let myRegex = /[^aeiouu0-9]/ig // caracter de negação
+let result = quoteSample.match(myRegex) // Change this line
 
 console.log(result)
 
 // MATCH CARACTHERS THAT OCCUR ONE OR MORE TIME
 
 /* Por exemplo, / a + / g encontraria uma correspondência em abc e retornaria ["a"]. Por causa do +, ele também encontraria uma única correspondência em aabc e retornaria ["aa"]. */
+
+let difficultSpelling = "Mississippi"
+let myRegex = /s+/gi
+let result = difficultSpelling.match(myRegex)
+
+console.log(result)
