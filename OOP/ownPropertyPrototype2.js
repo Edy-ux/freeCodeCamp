@@ -30,23 +30,23 @@ console.log(ownProps)
 //Iterate Over All Properties
 
 function Dog(name) {
-    this.name = name;
+    this.name = name
 }
 //prototype properties
-Dog.prototype.numLegs = 4; //prototype
+Dog.prototype.numLegs = 4 //prototype
 
-let beagle = new Dog("Snoopy");
+let beagle = new Dog("Snoopy")
 
-let ownProps = [];
-let prototypeProps = [];
+let ownProps = []
+let prototypeProps = []
 
 for (let property in beagle) {
     if (beagle.hasOwnProperty(property)) {
-        ownProps.push(property);
+        ownProps.push(property)
     } else {
-        prototypeProps.push(property);
+        prototypeProps.push(property)
     }
 }
 
-console.log(ownProps);
-console.log(prototypeProps);
+console.log(ownProps)
+console.log(prototypeProps)

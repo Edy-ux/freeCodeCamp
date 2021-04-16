@@ -13,6 +13,7 @@ const makeServerRequest = new Promise((resolve, reject) => {
     }
 })
 
+
 //Lindando com o sucesso da promessa
 
 /* Quando você faz uma solicitação ao servidor, leva algum tempo e, depois que ela é concluída, 

@@ -8,9 +8,8 @@ const result = {
 
 function makeList(arr) {
     "use strict";
-    // change code below this line
     const failureItems = arr.map(item => `<li class="text-warning">${item}</li>`);
-    // change code above this line
+   
     return failureItems;
 }
 const failuresList = makeList(result.failure)
@@ -21,7 +20,9 @@ function makeList(arr) {
     // Only change code below this line
     const failureItems = []
     for (let elem of arr) {
-        const li = `<li class="text-warning">${elem}</li>`
+        const li = `
+                    <li class="text-warning">${elem}</li>
+                  `
         failureItems.push(li)
     }
     console.log(failureItems)

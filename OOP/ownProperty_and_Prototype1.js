@@ -46,23 +46,21 @@ ao prototype de Dog definindo o prototype para um novo objeto.*/
 
 
 function Bird(name) {
-    this.name = name;
+    this.name = name; //Own Property 
 }
 
-
-Bird.prototype = {
+Bird.prototype = { //prototype
     nunLegs: 4,
     eat: function() {
-        return console.log("crak crak crack")
+        return console.log("mom mom mom")
     },
     describe: function() {
         return console.log("My mane is " + this.name)
     }
 }
 
-
 /* Há um defeito crucial ao definir manualmente os property para new Object. Ele apaga
- a propiedade constructor dessa propiedade. Essa propiedade pode ser usada p/ checar que função construtora ou Class criou a instancia, mas uma vez que property foi reescrita. Agora dar um resultado falso */
+ a propriedade constructor dessa propiedade. Essa propiedade pode ser usada p/ checar que função construtora ou Class criou a instancia, mas uma vez que property foi reescrita. Agora dar um resultado falso */
 
 const beagle = new Bird('Twistk')
 
